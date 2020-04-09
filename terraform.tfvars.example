@@ -1,0 +1,4 @@
+do_token = "yourtoken"
+email    = "me@email.com"
+domain   = "mydomain.com"
+ssh_keys = "your-ssh-key-name"
