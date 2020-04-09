@@ -33,8 +33,7 @@ resource "digitalocean_floating_ip" "jitsi_floating_ip" {
 }
 
 resource "digitalocean_domain" "jitsi_domain" {
-  name       = var.domain
-  ip_address = digitalocean_droplet.jitsi_server.ipv4_address
+  name = var.domain
 }
 
 resource "digitalocean_record" "jitsi_record" {
