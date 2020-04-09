@@ -61,7 +61,7 @@ And run the following (replace `$EMAIL` with your email):
 $ echo $EMAIL | /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 ```
 
-If everything goes well and the certification is creeated correctly, you can navigate to your domain and be greeted with Jitsi's dashboard!
+If everything goes well and the certification is created correctly, you can navigate to your domain and be greeted with Jitsi's dashboard!
 
 > Au revoir, Zoom! :)
 
