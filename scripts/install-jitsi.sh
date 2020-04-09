@@ -2,10 +2,9 @@
 
 set -e
 
-export DEBIAN_FRONTEND=noninteractive
-
 export HOSTNAME="${domain}"
-export EMAIL="${email}"
+
+export DEBIAN_FRONTEND=noninteractive
 
 # Add jitsi repository
 wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -

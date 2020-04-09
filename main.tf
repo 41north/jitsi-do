@@ -9,15 +9,6 @@ provider "digitalocean" {
 data "template_file" "install_script" {
   template = file("./scripts/install-jitsi.sh")
   vars = {
-    email  = var.email
-    domain = var.domain
-  }
-}
-
-data "template_file" "letsencrypt" {
-  template = file("./scripts/letsencrypt.sh")
-  vars = {
-    email  = var.email
     domain = var.domain
   }
 }
@@ -34,11 +25,6 @@ resource "digitalocean_droplet" "jitsi_server" {
   private_networking = true
   user_data          = format("%s", data.template_file.install_script.rendered)
   ssh_keys           = [data.digitalocean_ssh_key.key.id]
-
-  provisioner "file" {
-    source      = format("%s", data.template_file.letsencrypt.rendered)
-    destination = "/root/letsencrypt.sh"
-  }
 }
 
 resource "digitalocean_floating_ip" "jitsi_floating_ip" {

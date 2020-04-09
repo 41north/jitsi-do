@@ -25,11 +25,6 @@ variable "domain" {
   description = "Which domain is used by Jitsi."
 }
 
-variable "email" {
-  default     = ""
-  description = "Email address used by LetsEncrypt service."
-}
-
 variable "ssh_key_name" {
   default     = ""
   description = "Name of the SSH Digital Ocean keys to allow remote access to the droplet."
@@ -60,15 +55,19 @@ By default it will auto-install `jitsi` but it won't perform automatic SSL gener
 $ ssh -i .ssh/${your_ssh_key} root@${your_droplet_ip}
 ```
 
-And run the following:
+And run the following (replace `$EMAIL` with your email):
 
 ```sh
-$ ./letsencrypt.sh
+$ echo $EMAIL | /usr/share/jitsi-meet/scripts/install-letsencrypt-cert.sh
 ```
 
 If everything goes well and the certification is creeated correctly, you can navigate to your domain and be greeted with Jitsi's dashboard!
 
 > Au revoir, Zoom! :)
+
+## Acknowledgements
+
+Inspired by (Terraform AWS Jitsi Meet for AWS)[https://github.com/AvasDream/terraform_aws_jitsi_meet].
 
 ## License
 

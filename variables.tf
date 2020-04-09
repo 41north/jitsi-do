@@ -8,11 +8,6 @@ variable "domain" {
   description = "Which domain is used by Jitsi."
 }
 
-variable "email" {
-  default     = ""
-  description = "Email address used by LetsEncrypt service."
-}
-
 variable "ssh_key_name" {
   default     = ""
   description = "Name of the SSH Digital Ocean keys to allow remote access to the droplet."
