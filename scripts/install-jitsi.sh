@@ -12,8 +12,7 @@ wget -qO - https://download.jitsi.org/jitsi-key.gpg.key | sudo apt-key add -
 sh -c "echo 'deb https://download.jitsi.org stable/' > /etc/apt/sources.list.d/jitsi-stable.list"
 
 # Update repositories
-apt-get -yq update
-apt-get -yq upgrade
+apt update -y
 
 # disable ipv6
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
