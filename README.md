@@ -67,7 +67,7 @@ If everything goes well and the certification is creeated correctly, you can nav
 
 ## Acknowledgements
 
-Inspired by (Terraform AWS Jitsi Meet for AWS)[https://github.com/AvasDream/terraform_aws_jitsi_meet].
+Inspired by [Terraform AWS Jitsi Meet for AWS](https://github.com/AvasDream/terraform_aws_jitsi_meet).
 
 ## License
 
